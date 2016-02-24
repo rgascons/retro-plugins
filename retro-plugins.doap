@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:gnome="http://api.gnome.org/doap-extensions#"
+         xmlns="http://usefulinc.com/ns/doap#">
+
+  <name xml:lang="en">Retro plugins</name>
+  <shortdesc xml:lang="en">Plugins for Retro</shortdesc>
+  <download-page rdf:resource="https://github.com/Kekun/retro-plugins/releases" />
+  <bug-database rdf:resource="https://github.com/Kekun/retro-plugins/issues" />
+
+  <maintainer>
+    <foaf:Person>
+      <foaf:name>Adrien Plazas</foaf:name>
+      <foaf:mbox rdf:resource="mailto:kekun.plazas@laposte.net" />
+      <gnome:userid>aplazas</gnome:userid>
+    </foaf:Person>
+  </maintainer>
+</Project>

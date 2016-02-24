@@ -10,6 +10,9 @@
   <download-page rdf:resource="https://github.com/Kekun/retro-plugins/releases" />
   <bug-database rdf:resource="https://github.com/Kekun/retro-plugins/issues" />
 
+  <category rdf:resource="http://api.gnome.org/doap-extensions#apps" />
+  <programming-language>C++</programming-language>
+
   <maintainer>
     <foaf:Person>
       <foaf:name>Adrien Plazas</foaf:name>

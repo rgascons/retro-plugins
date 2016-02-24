@@ -6,6 +6,7 @@ AC_PROG_CC
 LT_INIT
 
 # Plugins
+m4_include([plugins/game-boy/configure.ac])
 
 PKG_CHECK_MODULES(RETRO_PLUGINS, [
 	retro-gobject-0.4

@@ -4,3 +4,6 @@
 [submodule "plugins/nes/nestopia"]
 	path = plugins/nes/nestopia
 	url = https://github.com/libretro/nestopia.git
+[submodule "plugins/pc-engine/beetle-pce-fast-libretro"]
+	path = plugins/pc-engine/beetle-pce-fast-libretro
+	url = https://github.com/libretro/beetle-pce-fast-libretro.git

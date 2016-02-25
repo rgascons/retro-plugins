@@ -1,0 +1,50 @@
+prefix = @prefix@
+exec_prefix = @exec_prefix@
+libdir = @libdir@
+PACKAGE = @PACKAGE@
+PACKAGE_NAME = @PACKAGE_NAME@
+PACKAGE_VERSION = @PACKAGE_VERSION@
+
+INSTALL_DIR = $(libdir)/retro-1.0/plugins
+DEST_INSTALL_DIR = $(DESTDIR)$(INSTALL_DIR)
+
+SYSTEM_NAME = snes
+
+INSTALLED_NAME = libretro-$(SYSTEM_NAME).so
+INSTALLED = $(DEST_INSTALL_DIR)/$(INSTALLED_NAME)
+
+OUT_ACCURATE = bsnes-libretro/out/bsnes_accuracy_libretro.so
+OUT_BALANCED = bsnes-libretro/out/bsnes_balanced_libretro.so
+OUT = $(OUT_BALANCED)
+
+CLEANFILES = $(OUT_ACCURATE) $(OUT_BALANCED) $(OUT)
+DISTCLEANFILES = Makefile config.log config.status
+MAINTAINERCLEANFILES = autom4te.cache
+
+all: $(OUT)
+
+install:
+	install -D $(OUT) $(INSTALLED)
+
+install-exec:
+
+install-data: install
+
+$(OUT_ACCURATE):
+	make -C bsnes-libretro profile=accuracy
+
+$(OUT_BALANCED):
+	make -C bsnes-libretro profile=balanced
+
+clean:
+	make -C bsnes-libretro clean
+	rm -Rf $(CLEANFILES)
+
+distclean:
+	rm -Rf $(DISTCLEANFILES)
+
+maintainer-clean:
+	rm -Rf $(MAINTAINERCLEANFILES)
+
+.PHONY: all install clean distclean maintainer-clean
+

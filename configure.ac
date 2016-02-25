@@ -9,6 +9,7 @@ LT_INIT
 m4_include([plugins/game-boy/configure.ac])
 m4_include([plugins/nes/configure.ac])
 m4_include([plugins/pc-engine/configure.ac])
+m4_include([plugins/snes/configure.ac])
 
 PKG_CHECK_MODULES(RETRO_PLUGINS, [
 	retro-gobject-0.4

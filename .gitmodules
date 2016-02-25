@@ -1,3 +1,6 @@
 [submodule "plugins/game-boy/gambatte-libretro"]
 	path = plugins/game-boy/gambatte-libretro
 	url = https://github.com/libretro/gambatte-libretro.git
+[submodule "plugins/nes/nestopia"]
+	path = plugins/nes/nestopia
+	url = https://github.com/libretro/nestopia.git

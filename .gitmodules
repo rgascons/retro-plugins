@@ -13,3 +13,6 @@
 [submodule "plugins/mame/mame"]
 	path = plugins/mame/mame
 	url = https://github.com/libretro/mame.git
+[submodule "plugins/game-boy-advance/beetle-gba-libretro"]
+	path = plugins/game-boy-advance/beetle-gba-libretro
+	url = https://github.com/libretro/beetle-gba-libretro.git

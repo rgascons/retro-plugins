@@ -1,0 +1,45 @@
+prefix = @prefix@
+exec_prefix = @exec_prefix@
+libdir = @libdir@
+PACKAGE = @PACKAGE@
+PACKAGE_NAME = @PACKAGE_NAME@
+PACKAGE_VERSION = @PACKAGE_VERSION@
+
+INSTALL_DIR = $(libdir)/retro-1.0/plugins
+DEST_INSTALL_DIR = $(DESTDIR)$(INSTALL_DIR)
+
+SYSTEM_NAME = game-boy-advance
+
+INSTALLED_NAME = libretro-$(SYSTEM_NAME).so
+INSTALLED = $(DEST_INSTALL_DIR)/$(INSTALLED_NAME)
+
+OUT = beetle-gba-libretro/mednafen_gba_libretro.so
+
+CLEANFILES = $(OUT)
+DISTCLEANFILES = Makefile config.log config.status
+MAINTAINERCLEANFILES = autom4te.cache
+
+all: $(OUT)
+
+install:
+	install -D $(OUT) $(INSTALLED)
+
+install-exec:
+
+install-data: install
+
+$(OUT):
+	make -C $(@D)
+
+clean:
+	make -C beetle-gba-libretro clean
+	rm -Rf $(CLEANFILES)
+
+distclean:
+	rm -Rf $(DISTCLEANFILES)
+
+maintainer-clean:
+	rm -Rf $(MAINTAINERCLEANFILES)
+
+.PHONY: all install clean distclean maintainer-clean
+

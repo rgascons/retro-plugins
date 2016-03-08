@@ -10,3 +10,6 @@
 [submodule "plugins/snes/bsnes-libretro"]
 	path = plugins/snes/bsnes-libretro
 	url = https://github.com/libretro/bsnes-libretro.git
+[submodule "plugins/mame/mame"]
+	path = plugins/mame/mame
+	url = https://github.com/libretro/mame.git

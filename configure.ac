@@ -8,6 +8,7 @@ LT_INIT
 # Plugins
 m4_include([plugins/game-boy/configure.ac])
 m4_include([plugins/mame/configure.ac])
+m4_include([plugins/neo-geo-pocket/configure.ac])
 m4_include([plugins/nes/configure.ac])
 m4_include([plugins/pc-engine/configure.ac])
 m4_include([plugins/snes/configure.ac])

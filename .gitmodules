@@ -13,3 +13,6 @@
 [submodule "plugins/mame/mame"]
 	path = plugins/mame/mame
 	url = https://github.com/libretro/mame.git
+[submodule "plugins/neo-geo-pocket/beetle-ngp-libretro"]
+	path = plugins/neo-geo-pocket/beetle-ngp-libretro
+	url = https://github.com/libretro/beetle-ngp-libretro.git

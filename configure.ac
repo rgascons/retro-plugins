@@ -14,7 +14,7 @@ m4_include([plugins/pc-engine/configure.ac])
 m4_include([plugins/snes/configure.ac])
 
 PKG_CHECK_MODULES(RETRO_PLUGINS, [
-	retro-gobject-0.4
+	retro-gobject-0.6
 ])
 
 AC_CONFIG_FILES([

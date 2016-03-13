@@ -19,3 +19,6 @@
 [submodule "plugins/atari-2600/stella-libretro"]
 	path = plugins/atari-2600/stella-libretro
 	url = https://github.com/libretro/stella-libretro.git
+[submodule "plugins/atari-7800/prosystem-libretro"]
+	path = plugins/atari-7800/prosystem-libretro
+	url = https://github.com/libretro/prosystem-libretro.git

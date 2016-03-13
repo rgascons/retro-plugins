@@ -4,6 +4,10 @@ if ENABLE_ATARI_2600_PLUGIN
 SUBDIRS += atari-2600
 endif
 
+if ENABLE_ATARI_7800_PLUGIN
+SUBDIRS += atari-7800
+endif
+
 if ENABLE_GAME_BOY_PLUGIN
 SUBDIRS += game-boy
 endif

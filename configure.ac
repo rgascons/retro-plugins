@@ -20,6 +20,7 @@ PKG_CHECK_MODULES(RETRO_PLUGINS, [
 AC_CONFIG_FILES([
 	Makefile
 	plugins/Makefile
+	plugins/submodule-plugin.mk
 ])
 
 AC_OUTPUT

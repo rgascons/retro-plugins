@@ -1,45 +1,12 @@
-prefix = @prefix@
-exec_prefix = @exec_prefix@
-libdir = @libdir@
-PACKAGE = @PACKAGE@
-PACKAGE_NAME = @PACKAGE_NAME@
-PACKAGE_VERSION = @PACKAGE_VERSION@
-
-INSTALL_DIR = $(libdir)/retro-1.0/plugins
-DEST_INSTALL_DIR = $(DESTDIR)$(INSTALL_DIR)
-
 SYSTEM_NAME = pc-engine
+SUBMODULE_DIR = beetle-pce-fast-libretro
 
-INSTALLED_NAME = libretro-$(SYSTEM_NAME).so
-INSTALLED = $(DEST_INSTALL_DIR)/$(INSTALLED_NAME)
-
-OUT = beetle-pce-fast-libretro/mednafen_pce_fast_libretro.so
-
-CLEANFILES = $(OUT)
-DISTCLEANFILES = Makefile config.log config.status
-MAINTAINERCLEANFILES = autom4te.cache
-
-all: $(OUT)
-
-install:
-	install -D $(OUT) $(INSTALLED)
-
-install-exec:
-
-install-data: install
+OUT = $(SUBMODULE_DIR)/mednafen_pce_fast_libretro.so
 
 $(OUT):
-	make -C $(@D)
+	make -C $(SUBMODULE_DIR)
 
-clean:
-	make -C beetle-pce-fast-libretro clean
-	rm -Rf $(CLEANFILES)
+submodule-clean:
+	make -C $(SUBMODULE_DIR) clean
 
-distclean:
-	rm -Rf $(DISTCLEANFILES)
-
-maintainer-clean:
-	rm -Rf $(MAINTAINERCLEANFILES)
-
-.PHONY: all install clean distclean maintainer-clean
-
+-include ../submodule-plugin.mk

@@ -36,4 +36,9 @@ distclean:
 maintainer-clean:
 	rm -Rf $(MAINTAINERCLEANFILES)
 
+distdir: $(DISTFILES)
+	echo configure.ac | python3 ../distdir.py '.' $(srcdir) $(distdir)
+	echo Makefile.in | python3 ../distdir.py '.' $(srcdir) $(distdir)
+	git --git-dir $(SUBMODULE_DIR)/.git ls-files $(GIT_LS_OPTIONS) | python3 ../distdir.py $(SUBMODULE_DIR) $(srcdir) $(distdir)
+
 .PHONY: all install clean distclean maintainer-clean

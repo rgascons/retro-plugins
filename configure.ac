@@ -6,6 +6,7 @@ AC_PROG_CC
 LT_INIT
 
 # Plugins
+m4_include([plugins/atari-7800/configure.ac])
 m4_include([plugins/game-boy/configure.ac])
 m4_include([plugins/mame/configure.ac])
 m4_include([plugins/neo-geo-pocket/configure.ac])

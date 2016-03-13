@@ -1,5 +1,9 @@
 SUBDIRS =
 
+if ENABLE_ATARI_7800_PLUGIN
+SUBDIRS += atari-7800
+endif
+
 if ENABLE_GAME_BOY_PLUGIN
 SUBDIRS += game-boy
 endif

@@ -1,12 +1,13 @@
 SYSTEM_NAME = nes
 SUBMODULE_DIR = nestopia
 
-OUT = $(SUBMODULE_DIR)/libretro/nestopia_libretro.so
-
-$(OUT):
-	make -C $(SUBMODULE_DIR)/libretro
-
-submodule-clean:
-	make -C $(SUBMODULE_DIR)/libretro clean
+OUT = $(srcdir)/$(SUBMODULE_DIR)/libretro/nestopia_libretro.so
 
 -include ../submodule-plugin.mk
+
+$(OUT):
+	make -C $(srcdir)/$(SUBMODULE_DIR)/libretro
+
+submodule-clean:
+	make -C $(srcdir)/$(SUBMODULE_DIR)/libretro clean
+

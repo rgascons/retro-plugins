@@ -1,19 +1,20 @@
 SYSTEM_NAME = snes
 SUBMODULE_DIR = bsnes-libretro
 
-OUT = $(SUBMODULE_DIR)/mame_libretro.so
+OUT = $(srcdir)/$(SUBMODULE_DIR)/mame_libretro.so
 
-OUT_ACCURATE = $(SUBMODULE_DIR)/out/bsnes_accuracy_libretro.so
-OUT_BALANCED = $(SUBMODULE_DIR)/out/bsnes_balanced_libretro.so
+OUT_ACCURATE = $(srcdir)/$(SUBMODULE_DIR)/out/bsnes_accuracy_libretro.so
+OUT_BALANCED = $(srcdir)/$(SUBMODULE_DIR)/out/bsnes_balanced_libretro.so
 OUT = $(OUT_BALANCED)
 
+-include ../submodule-plugin.mk
+
 $(OUT_ACCURATE):
-	make -C $(SUBMODULE_DIR) profile=accuracy
+	make -C $(srcdir)/$(SUBMODULE_DIR) profile=accuracy
 
 $(OUT_BALANCED):
-	make -C $(SUBMODULE_DIR) profile=balanced
+	make -C $(srcdir)/$(SUBMODULE_DIR) profile=balanced
 
 submodule-clean:
-	make -C $(SUBMODULE_DIR) clean
+	make -C $(srcdir)/$(SUBMODULE_DIR) clean
 
--include ../submodule-plugin.mk

@@ -1,12 +1,13 @@
 SYSTEM_NAME = neo-geo-pocket
 SUBMODULE_DIR = beetle-ngp-libretro
 
-OUT = $(SUBMODULE_DIR)/mednafen_ngp_libretro.so
-
-$(OUT):
-	make -C $(SUBMODULE_DIR)
-
-submodule-clean:
-	make -C $(SUBMODULE_DIR) clean
+OUT = $(srcdir)/$(SUBMODULE_DIR)/mednafen_ngp_libretro.so
 
 -include ../submodule-plugin.mk
+
+$(OUT):
+	make -C $(srcdir)/$(SUBMODULE_DIR)
+
+submodule-clean:
+	make -C $(srcdir)/$(SUBMODULE_DIR) clean
+

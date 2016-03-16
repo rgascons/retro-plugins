@@ -1,12 +1,13 @@
 SYSTEM_NAME = mame
 SUBMODULE_DIR = mame
 
-OUT = $(SUBMODULE_DIR)/mame_libretro.so
-
-$(OUT):
-	make -C $(SUBMODULE_DIR) -f Makefile.libretro
-
-submodule-clean:
-	make -C $(SUBMODULE_DIR) -f Makefile.libretro clean
+OUT = $(srcdir)/$(SUBMODULE_DIR)/mame_libretro.so
 
 -include ../submodule-plugin.mk
+
+$(OUT):
+	make -C $(srcdir)/$(SUBMODULE_DIR) -f Makefile.libretro
+
+submodule-clean:
+	make -C $(srcdir)/$(SUBMODULE_DIR) -f Makefile.libretro clean
+

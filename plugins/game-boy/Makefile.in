@@ -1,12 +1,13 @@
 SYSTEM_NAME = game-boy
 SUBMODULE_DIR = gambatte-libretro
 
-OUT = $(SUBMODULE_DIR)/libgambatte/gambatte_libretro.so
-
-$(OUT):
-	make -C $(SUBMODULE_DIR)/libgambatte -f Makefile.libretro
-
-submodule-clean:
-	make -C $(SUBMODULE_DIR)/libgambatte -f Makefile.libretro clean
+OUT = $(srcdir)/$(SUBMODULE_DIR)/libgambatte/gambatte_libretro.so
 
 -include ../submodule-plugin.mk
+
+$(OUT):
+	make -C $(srcdir)/$(SUBMODULE_DIR)/libgambatte -f Makefile.libretro
+
+submodule-clean:
+	make -C $(srcdir)/$(SUBMODULE_DIR)/libgambatte -f Makefile.libretro clean
+

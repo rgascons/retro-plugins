@@ -1,12 +1,13 @@
 SYSTEM_NAME = pc-engine
 SUBMODULE_DIR = beetle-pce-fast-libretro
 
-OUT = $(SUBMODULE_DIR)/mednafen_pce_fast_libretro.so
-
-$(OUT):
-	make -C $(SUBMODULE_DIR)
-
-submodule-clean:
-	make -C $(SUBMODULE_DIR) clean
+OUT = $(srcdir)/$(SUBMODULE_DIR)/mednafen_pce_fast_libretro.so
 
 -include ../submodule-plugin.mk
+
+$(OUT):
+	make -C $(srcdir)/$(SUBMODULE_DIR)
+
+submodule-clean:
+	make -C $(srcdir)/$(SUBMODULE_DIR) clean
+

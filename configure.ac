@@ -1,4 +1,4 @@
-AC_INIT([retro-plugins], [0.4.0])
+AC_INIT([retro-plugins], [0.6.0])
 AM_INIT_AUTOMAKE([foreign subdir-objects])
 
 AC_PROG_CC

@@ -1,0 +1,17 @@
+======================
+Version 0.6.0
+======================
+
+* Plugins:
+ - game-boy
+ - mame
+ - neo-geo-pocket
+ - nes
+ - pc-engine
+ - snes
+
+* Factorize the submodule based plugins (all of them so far)
+
+* Dist:
+ - Allow to run the dist rule
+ - Can't run distcheck: the submodules are built in their source directory

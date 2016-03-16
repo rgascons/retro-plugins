@@ -3,6 +3,8 @@ SUBMODULE_DIR = nestopia
 
 OUT = $(srcdir)/$(SUBMODULE_DIR)/libretro/nestopia_libretro.so
 
+GIT_LS_OPTIONS = | egrep -v '^doc|^libretro/jni|^libretro/msvc|^Nst|^projects|^source/nes_ntsc/tests|^source/unix|^source/zlib|.*\.bmp$$|.*\.html$$|.*\.xsd$$'
+
 -include ../submodule-plugin.mk
 
 $(OUT):

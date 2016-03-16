@@ -7,6 +7,8 @@ OUT_ACCURATE = $(srcdir)/$(SUBMODULE_DIR)/out/bsnes_accuracy_libretro.so
 OUT_BALANCED = $(srcdir)/$(SUBMODULE_DIR)/out/bsnes_balanced_libretro.so
 OUT = $(OUT_BALANCED)
 
+GIT_LS_OPTIONS = | egrep -v '^ananke/database|^ananke/heuristics/f|^ananke/heuristics/game-boy-|^ananke/heuristics/sa|^ananke/heuristics/suf|^ananke/resource|^ananke/Makefile|^ananke/.*\.cpp|^data|^fc|^gba|^phoenix|^processor/r6502|^profile|^ruby|^shaders|^target-libretro/jni'
+
 -include ../submodule-plugin.mk
 
 $(OUT_ACCURATE):

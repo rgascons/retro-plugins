@@ -3,6 +3,8 @@ SUBMODULE_DIR = beetle-pce-fast-libretro
 
 OUT = $(srcdir)/$(SUBMODULE_DIR)/mednafen_pce_fast_libretro.so
 
+GIT_LS_OPTIONS = | egrep -v '^jni|^mednafen/include/desa68|^mednafen/include/trio/CHANGES|^msvc'
+
 -include ../submodule-plugin.mk
 
 $(OUT):

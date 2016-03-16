@@ -3,6 +3,8 @@ SUBMODULE_DIR = mame
 
 OUT = $(srcdir)/$(SUBMODULE_DIR)/mame_libretro.so
 
+GIT_LS_OPTIONS = | egrep -i -v '^3rdparty/benchmark|^artwork|^benchmarks|^docs|^doxygen|^hash|^hlsl|^keymaps|^nl_examples|^src/ldplayer|^src/osd/windows|^src/osd/osdmini|^plugins|^samples|^tests'
+
 -include ../submodule-plugin.mk
 
 $(OUT):

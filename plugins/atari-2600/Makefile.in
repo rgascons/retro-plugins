@@ -1,0 +1,12 @@
+SYSTEM_NAME = atari-2600
+SUBMODULE_DIR = stella-libretro
+
+OUT = $(srcdir)/$(SUBMODULE_DIR)/stella_libretro.so
+
+-include ../submodule-plugin.mk
+
+$(OUT):
+	make -C $(srcdir)/$(SUBMODULE_DIR)
+
+submodule-clean:
+	make -C $(srcdir)/$(SUBMODULE_DIR) clean

@@ -16,3 +16,6 @@
 [submodule "plugins/neo-geo-pocket/beetle-ngp-libretro"]
 	path = plugins/neo-geo-pocket/beetle-ngp-libretro
 	url = https://github.com/libretro/beetle-ngp-libretro.git
+[submodule "plugins/atari-2600/stella-libretro"]
+	path = plugins/atari-2600/stella-libretro
+	url = https://github.com/libretro/stella-libretro.git

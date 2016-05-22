@@ -28,6 +28,10 @@ if ENABLE_PC_ENGINE_PLUGIN
 SUBDIRS += pc-engine
 endif
 
+if ENABLE_PSX_PLUGIN
+SUBDIRS += psx
+endif
+
 if ENABLE_SNES_PLUGIN
 SUBDIRS += snes
 endif

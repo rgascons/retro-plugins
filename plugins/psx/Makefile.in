@@ -1,0 +1,12 @@
+SYSTEM_NAME = psx
+SUBMODULE_DIR = prosystem-libretro
+
+OUT = $(srcdir)/$(SUBMODULE_DIR)/prosystem_libretro.so
+
+-include ../submodule-plugin.mk
+
+$(OUT):
+	make -C $(srcdir)/$(SUBMODULE_DIR)
+
+submodule-clean:
+	make -C $(srcdir)/$(SUBMODULE_DIR) clean

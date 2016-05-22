@@ -22,3 +22,6 @@
 [submodule "plugins/atari-7800/prosystem-libretro"]
 	path = plugins/atari-7800/prosystem-libretro
 	url = https://github.com/libretro/prosystem-libretro.git
+[submodule "plugins/psx/beetle-psx"]
+	path = plugins/psx/beetle-psx
+	url = https://github.com/libretro/beetle-psx-libretro.git

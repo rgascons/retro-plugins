@@ -22,3 +22,6 @@
 [submodule "plugins/atari-7800/prosystem-libretro"]
 	path = plugins/atari-7800/prosystem-libretro
 	url = https://github.com/libretro/prosystem-libretro.git
+[submodule "plugins/playstation/pcsx_rearmed"]
+	path = plugins/playstation/pcsx_rearmed
+	url = https://github.com/libretro/pcsx_rearmed.git

@@ -1,0 +1,14 @@
+SYSTEM_NAME = playstation
+SUBMODULE_DIR = pcsx_rearmed
+
+OUT = $(srcdir)/$(SUBMODULE_DIR)/pcsx_rearmed_libretro.so
+
+GIT_LS_OPTIONS = | egrep -v '^jni|^mednafen/include/desa68|^mednafen/include/trio/CHANGES|^msvc'
+
+-include ../submodule-plugin.mk
+
+$(OUT):
+	make -C $(srcdir)/$(SUBMODULE_DIR) -f Makefile.libretro
+
+submodule-clean:
+	make -C $(srcdir)/$(SUBMODULE_DIR) clean
